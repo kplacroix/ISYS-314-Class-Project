@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ AddPersons()
+comment0.text=\r\n\ Ask\ the\ basic\ information\ that\ pertains\ to\ all\ entries.\r\n
+comment1.params=
+comment1.target=void\ Logic()
+comment1.text=\r\n\ Use\ (probably\ unnecessarily\ complicated?)\ nested\ if-elseif\ statements\ to\ determine\ what\ additional\r\n\ information\ to\ collect\ based\ on\ the\ status\ of\ the\ person.\ I\ also\ use\ method\ calls\ to\ \r\n\ get\ additional\ information\ from\ the\ other\ classes.\ A\ bunch\ of\ if-else-esleif\ statements\ \r\n\ might\ be\ clunky\ but\ it\ should\ help\ reduce\ duplications\ and\ other\ errors.\r\n
+comment2.params=
+comment2.target=void\ ClearScreen()
+comment2.text=\r\n\ A\ very\ simple\ way\ to\ clear\ the\ screen\ that\ will\ work\ on\ any\ system.\r\n
+numComments=3
