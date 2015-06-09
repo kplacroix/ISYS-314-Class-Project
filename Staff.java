@@ -8,10 +8,13 @@ import java.util.* ;
  */
 public class Staff extends People
 {
+    
+
    public static int GetStaffOfficeNumber(){
            // Get the input from the user.
            Scanner userInput = new Scanner(System.in);
-           int staffOfficeNumber;
+           //Initialize as zero now and everytime this code is ran.
+           int staffOfficeNumber = 0;
           
            do {
            // Give instructions to the user.
@@ -32,23 +35,16 @@ public class Staff extends People
        }
        
    public static String GetStaffTitle(){
+           // Initialize as blank now and any time is code is ran.
+           String staffTitle = "";
+           // Give instructions to the user.
+           System.out.println("Enter the Staff's Title: Mr, Ms, Mrs \n");
            // Get the input from the user.
            Scanner userInput = new Scanner(System.in);
-           
-           // Give instructions to the user.
-           System.out.println("Enter the Staff's Title, eg. Mr. = M, Ms. = m, Mrs. = R \n");
-           // Run a while loop to validate user input.
-           while (!userInput.hasNext("[MmR]")){
-               // Display error and reiterate instructions.
-               System.out.println("Error: You must enter M, m, or R \n");
-               // Repeat loop
-               userInput.next();
-           }
-        
-            // Store the validated input 
-            String staffTitle = userInput.next();
-            System.out.println("\n");
-            // Be able to return the validated input for future use.
+           // Store the validated input 
+           staffTitle = userInput.next();
+           System.out.println("\n");
+           // Return the input for future callers.
             return staffTitle;
        }
 }
