@@ -18,6 +18,7 @@ public class Staff extends People
           
            do {
            // Give instructions to the user.
+           System.out.println("\n");
            System.out.println("Enter the Staff's Office Number eg. 101");
            // Run a while loop to validate user input.
            while (!userInput.hasNextInt()){

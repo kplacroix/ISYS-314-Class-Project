@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ clearScreen()
+comment0.text=\r\n\ A\ very\ simple\ way\ to\ clear\ the\ screen\ that\ will\ work\ on\ any\ system.\r\n
+comment1.params=
+comment1.target=void\ sleepThread()
+comment1.text=\r\n\ Sleep\ the\ program,\ used\ in\ various\ places.\r\n
+numComments=2
