@@ -9,7 +9,7 @@ import java.util.*;
  * @version 06/09/2015
  */
 public class MiscFunctions extends People
-{
+{   
     /**
      * A very simple way to clear the screen that will work on any system.
      */
@@ -32,5 +32,16 @@ public class MiscFunctions extends People
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+    }
+    
+    /**
+     * An easy to 'quit' the program
+     */
+    public static void quitProgram()
+    {
+        // Message telling the user the program is done, used later.
+        String done = "You have selected to exit the program. The program is now terminated.";
+        clearScreen();
+        System.out.println(done);
     }
 }

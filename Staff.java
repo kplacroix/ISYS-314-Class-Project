@@ -39,7 +39,7 @@ public class Staff extends People
            // Initialize as blank now and any time is code is ran.
            String staffTitle = "";
            // Give instructions to the user.
-           System.out.println("Enter the Staff's Title: Mr, Ms, Mrs \n");
+           System.out.println("Enter the Staff's Title: Analysts, IT, Management, etc");
            // Get the input from the user.
            Scanner userInput = new Scanner(System.in);
            // Store the validated input 
