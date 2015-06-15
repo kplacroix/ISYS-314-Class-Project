@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=int\ GetStaffOfficeNumber()
+comment0.text=\r\n\ Get\ the\ office\ number\r\n\ @return\ staffOfficeNumber\r\n
 comment1.params=
 comment1.target=java.lang.String\ GetStaffTitle()
+comment1.text=\r\n\ Get\ the\ staff\ title\r\n\ @return\ staffTitle\r\n
 numComments=2

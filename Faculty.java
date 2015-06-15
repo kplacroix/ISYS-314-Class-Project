@@ -1,14 +1,21 @@
-import java.util.*;
+// Import scanner from the util package to accept user input.
+import java.util.Scanner;
 
 /**
- * Write a description of class Faculty here.
+ * This class is called from the superclass People if the user selects Faculty as their person type.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ken LaCroix
+ * @version 05/24/2015
  */
 public class Faculty extends People
 {
-     public static int GetFacultyOfficeNumber(){
+   /**
+    * This function will obtain the office number of the faculty. Basic error checking
+    * is implemented to ensure the the input is a number
+    * 
+    * @return facultyOfficeNumber
+    */
+   public static int GetFacultyOfficeNumber(){
            // Get the input from the user.
            Scanner userInput = new Scanner(System.in);
            int facultyOfficeNumber;
@@ -30,8 +37,13 @@ public class Faculty extends People
         } while (facultyOfficeNumber <= 0);  
             // Be able to return the validated input for future use. Since it passed number validation.
             return facultyOfficeNumber;
-       }
-       
+   }
+   
+   /**
+    * This function will obtain the tenure status of the faculty in the form of a boolean
+    * 
+    * @return tenureSatus
+    */
    public static boolean GetTenureStatus(){
            // Make field available for input from the user.
            String userInput;

@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.params=
 comment0.target=java.lang.String\ GetStudentStatus()
+comment0.text=\r\n\ This\ function\ will\ determine\ what\ the\ type\ of\ student\ is.\ The\ user\ must\ select\r\n\ from\ the\ four\ choices\ or\ the\ loop\ will\ repeat.\r\n\ \r\n\ @return\ classStatus\r\n
 numComments=1

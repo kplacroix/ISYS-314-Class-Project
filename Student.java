@@ -1,13 +1,21 @@
-import java.util.*;
+// Import scanner for user input
+import java.util.Scanner;
 
 /**
- * Write a description of class Student here.
+ * This class will collect the additional information if the user selects
+ * 'student' as their person type.
  * 
  * @author Ken LaCroix 
  * @version 05/24/2015
  */
 public class Student extends People
 {
+    /**
+     * This function will determine what the type of student is. The user must select
+     * from the four choices or the loop will repeat.
+     * 
+     * @return classStatus
+     */
     public static String GetStudentStatus(){
            // A Boolean to be used in a loop to make sure there is valid input
            Boolean keepLoopingStudentStatus = true;
@@ -15,7 +23,7 @@ public class Student extends People
            while(keepLoopingStudentStatus==true){
                // Give instructions to the user.
                System.out.println("\n");
-               System.out.println("Enter the status: freshman, sophmore, junior, senior");
+               System.out.println("Enter the status: freshman, sophomore, junior, senior");
                // Get the input from the user.
                Scanner userInput = new Scanner(System.in);
                // Store the validated input 
@@ -27,8 +35,8 @@ public class Student extends People
                         classStatus = "freshman";
                         keepLoopingStudentStatus=false;
                         break;
-                   case "sophmore":
-                        classStatus = "sophmore";
+                   case "sophomore":
+                        classStatus = "sophomore";
                         keepLoopingStudentStatus=false;
                         break;
                    case "junior":
@@ -43,7 +51,6 @@ public class Student extends People
                         MiscFunctions.clearScreen();
                         keepLoopingStudentStatus=true;
                 }
-               //keepLoopingStudentStatus=true;
             }
        return classStatus;
     }

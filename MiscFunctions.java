@@ -1,9 +1,7 @@
-// I use various items from this package, so just import them all.
-import java.util.*;
-
 /**
- * This class holds miscellaneus functions that I didnt want in tthe 
- * people superclass to avoid cluttering of the code.
+ * This class holds miscellaneous functions that I didn't want in the 
+ * people superclass to avoid cluttering of the code and making the
+ * super class unduly long.
  * 
  * @author Kenneth LaCroix 
  * @version 06/09/2015

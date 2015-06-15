@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=int\ GetFacultyOfficeNumber()
+comment0.text=\r\n\ This\ function\ will\ obtain\ the\ office\ number\ of\ the\ faculty.\ Basic\ error\ checking\r\n\ is\ implemented\ to\ ensure\ the\ the\ input\ is\ a\ number\r\n\ \r\n\ @return\ facultyOfficeNumber\r\n
 comment1.params=
 comment1.target=boolean\ GetTenureStatus()
+comment1.text=\r\n\ This\ function\ will\ obtain\ the\ tenure\ status\ of\ the\ faculty\ in\ the\ form\ of\ a\ boolean\r\n\ \r\n\ @return\ tenureSatus\r\n
 numComments=2

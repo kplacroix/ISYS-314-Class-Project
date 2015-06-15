@@ -5,15 +5,18 @@ import java.util.*;
 /**
  * This program will collect data about a person and then make decisions based 
  * upon the status of the person. Features include: adding, deleting, 
- * printing, searching, retrieving and modifying of values. The bulk of the programs
- * lives here. I could not  creat a function that would print just the student because 
- * of the way I added values to the TreeMap (concantenated). 
+ * printing, searching, retrieving and modifying of values. The bulk of the 
+ * programs lives here. I could not  create a function that would print just the 
+ * student because of the way I added values to the TreeMap (concatenated). 
+ * The newPerson function is the only function that is public because the map needs 
+ * to be 'primed' with at least one valid entry for most all other functions to work. 
+ * Once a person is entered, the main menu is shown allowing other actions to be done.
  * 
  * @author Ken LaCroix
  * @version 05/23/2015-6/14/2015
  */
  
-// Surpress the warnings I kept on getting, probably because of the way I declared TreeMap, however compiling is still successfull, so surpress.
+// Suppress the warnings I kept on getting, probably because of the way I declared TreeMap, however compiling is still successful.
  @SuppressWarnings("unchecked") public class People
 {
     // Have these fields be available on a global level.
@@ -33,12 +36,13 @@ import java.util.*;
     TreeMap directory = new TreeMap();
     
      /**
-     * A very basic menu system to help the user execute the programs functions instead of instantizing functions.
+     * A very basic menu system to help the user execute the programs functions instead of instantiating functions.
+     * User a switch case that calls other functions to simulate a menu.
      */
     
     private void MainMenu()
     {
-        // Clear any miscelaneus text
+        // Clear any miscellaneous text
         MiscFunctions.clearScreen();
         // New scanner object in preparation of accepting user input
         Scanner in = new Scanner(System.in);
@@ -60,24 +64,31 @@ import java.util.*;
             String choice = in.nextLine();
         switch (choice){
             case "1":
+                // Call the function that will get the info and add to the treemap.
                 newPerson();
             case "2":
+                // Call the function that will search the map and overwrite an entry.
                 modifyPerson();
                 break;
             case "3": 
+                // Call the function that will search the map by the key.
                 searchForName();
                 break;
             case "4":
+                // Call the function that will search the map and remove an entry by its key.
                 removeFromDirectory();
                 break;
             case "5": 
+                // Iterate through the map and print its entries
                 printList();
                 break;
             case "6":
+                // Simulate exiting the program. Stop the menu loop.
                 MiscFunctions.quitProgram();
                 keepLoopingMenu = false;
                 break;
             default:
+                // Shown if an appropriate case was not found. 
                 System.out.println("Enter a number between 1-6 \n");
                 keepLoopingMenu = true;
         
@@ -87,6 +98,7 @@ import java.util.*;
     
     /**
      * Ask the basic information that pertains to all entries. This function also adds entries into the TreeMap.
+     * Uses a while loop with nested a switch case. Entries are added to the map via put. 
      */
     public void newPerson()
     {
@@ -182,6 +194,7 @@ import java.util.*;
    
     /**
      * Remove an entry from the TreeMap by searching for the key (lastname+firstname).
+     * Entries are removed via remove.
      */
     private void removeFromDirectory()
     {   
@@ -227,7 +240,7 @@ import java.util.*;
     
     
     /**
-     * Search the list
+     * Search the list and print the appropriate values from the map.
      */
     private void searchForName()
     {
@@ -246,7 +259,7 @@ import java.util.*;
                 MiscFunctions.clearScreen();
                 System.out.println("\n");
                 System.out.println("Search for key: " + searchName + " found!");
-                System.out.println("The entry is: "+ directory.get(searchName) + "\n");
+                System.out.println("The entry is: " + searchName + ": " + directory.get(searchName) + "\n");
                 // Execute the function that asks the user to continue the program.
                 continueMenu();
                 } else {
@@ -260,7 +273,7 @@ import java.util.*;
             }
             
      /**
-     * Print the list using an interator
+     * Print the list using an iterator.
      */
      private void printList()
     {   
@@ -296,7 +309,7 @@ import java.util.*;
     }
     
      /**
-     * Function to continue looping the main menu, used to reduce duplicate code.
+     * Function to ask the user to continue looping or exit the program, used to reduce duplicate code.
      */
     private void continueMenu()
     {
@@ -316,8 +329,8 @@ import java.util.*;
     }
     
     /**
-     * Function to modify value for an existing key. It uses the exisnting classes for
-     * student, staff and faculty to reobtain information. The email address is recaptured
+     * Function to modify value for an existing key. It uses the existing classes for
+     * student, staff and faculty to re obtain information. The email address is recaptured
      * by asking for it again. All we need to do is update the record using the appropriate by 
      * reputting it in the map.
      */

@@ -1,7 +1,10 @@
 import java.util.* ;
 
 /**
- * Write a description of class Staff here.
+ * If the user selects "staff" as their person type, this function is called
+ * to gather the additional information. It does have some basic error checking
+ * to see if the office number entered is a number. Staff title does not have any
+ * error checking.
  * 
  * @author Ken LaCroix 
  * @version 05/24/2015
@@ -9,11 +12,14 @@ import java.util.* ;
 public class Staff extends People
 {
     
-
+    /***
+     * Get the office number
+     * @return staffOfficeNumber
+     */
    public static int GetStaffOfficeNumber(){
            // Get the input from the user.
            Scanner userInput = new Scanner(System.in);
-           //Initialize as zero now and everytime this code is ran.
+           //Initialize as zero now and every-time this code is ran.
            int staffOfficeNumber = 0;
           
            do {
@@ -34,12 +40,16 @@ public class Staff extends People
             // Be able to return the validated input for future use. Since it passed number validation.
             return staffOfficeNumber;
        }
-       
+   
+   /**
+    * Get the staff title
+    * @return staffTitle
+    */
    public static String GetStaffTitle(){
            // Initialize as blank now and any time is code is ran.
            String staffTitle = "";
            // Give instructions to the user.
-           System.out.println("Enter the Staff's Title: Analysts, IT, Management, etc");
+           System.out.println("Enter the Staff's Title: Analysts, IT, Management, etc.");
            // Get the input from the user.
            Scanner userInput = new Scanner(System.in);
            // Store the validated input 
